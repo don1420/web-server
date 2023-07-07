@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         forecastContainer.textContent = 'Loading...'
 
-        fetch(`http://localhost:3000/weather?address=${data.location}`).then(response => {
+        fetch(`/weather?address=${data.location}`).then(response => {
             response.json().then(data => {
                 if (data.error) {
                     forecastContainer.textContent = data.error
